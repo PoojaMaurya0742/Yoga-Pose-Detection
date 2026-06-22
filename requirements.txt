@@ -1,0 +1,9 @@
+streamlit
+opencv-python-headless
+mediapipe
+numpy
+supabase
+gTTS
+pygame
+google-generativeai
+pyttsx3
