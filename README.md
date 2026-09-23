@@ -1,195 +1,224 @@
-🧘‍♀️ Yoga Pose Detection
+# 🧘‍♀️ Yoga Pose Detection
 
-An AI-powered Yoga Pose Detection and Posture Correction system developed as a 2nd-year academic mini project.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge&logo=opencv" alt="OpenCV">
+  <img src="https://img.shields.io/badge/MediaPipe-Pose%20Estimation-orange?style=for-the-badge" alt="MediaPipe">
+  <img src="https://img.shields.io/badge/Streamlit-Web%20App-red?style=for-the-badge&logo=streamlit" alt="Streamlit">
+</p>
 
-The application uses Computer Vision, MediaPipe, OpenCV, and Streamlit to detect yoga poses through a webcam, analyze body posture using joint angles, and provide real-time feedback to help users perform poses correctly.
+<p align="center">
+  <strong>AI-Powered Real-Time Yoga Pose Detection & Posture Correction</strong>
+</p>
 
-📌 Project Overview
+<p align="center">
+  A Computer Vision based virtual yoga assistant that detects yoga poses through a webcam,
+  analyzes body posture using joint angles, and provides real-time corrective feedback.
+</p>
 
-Yoga Pose Detection is a real-time computer vision application that acts as a virtual yoga assistant.
+---
 
-The system captures the user's pose through a webcam and uses MediaPipe Pose Estimation to identify body landmarks. These landmarks are then used to calculate joint angles and analyze whether the user is performing a yoga pose correctly.
+## 🏆 Achievement
 
-The application also provides:
+> 🥈 **2nd Prize — ProjecTech 2025**
 
-🧘 Real-time yoga pose detection
-📐 Joint-angle based posture analysis
-💬 Real-time posture correction feedback
-🔊 English and Hindi voice feedback
-🤖 AI chatbot assistance
-👤 User authentication
-📊 Progress tracking
-📸 Pose snapshots
-🌐 Streamlit-based interactive interface
-✨ Features
-🧘 Real-Time Pose Detection
+This project was presented at **ProjecTech 2025** and received **2nd Prize** for its implementation of real-time yoga pose detection and posture analysis using Computer Vision.
 
-Detects body landmarks from the webcam using MediaPipe Pose.
+---
 
-The system tracks important body points such as:
+## 📌 About The Project
 
-Shoulders
-Elbows
-Wrists
-Hips
-Knees
-Ankles
-📐 Joint Angle Calculation
+**Yoga Pose Detection** is an AI and Computer Vision based application developed as a **2nd-year academic mini project**.
 
-The application calculates angles between body joints to evaluate posture.
+The system uses a webcam to capture the user's movements and applies **MediaPipe Pose Estimation** to detect human body landmarks. These landmarks are analyzed using joint-angle calculations to identify yoga poses and provide posture correction feedback.
 
-For example:
+The application is designed as a **virtual yoga assistant**, helping users practice yoga while receiving real-time visual and voice-based guidance.
 
-Shoulder
-    |
-    |
-   Elbow
-     \
-      \
-      Wrist
+---
 
-The angle between these points can be calculated using their coordinates.
+## ✨ Key Features
 
-✅ Posture Correction
+* 🧘 **Real-Time Yoga Pose Detection**
+* 📷 **Webcam-Based Pose Estimation**
+* 🦴 **Human Body Landmark Detection**
+* 📐 **Joint Angle Calculation**
+* ✅ **Posture Detection & Correction**
+* 🔊 **English & Hindi Voice Feedback**
+* 🤖 **AI-Powered Yoga Chatbot**
+* 👤 **User Authentication**
+* 📊 **Progress Tracking**
+* 📸 **Pose Snapshots**
+* 🌐 **Interactive Streamlit Web Interface**
 
-The system compares detected joint angles with predefined posture conditions and provides feedback such as:
+---
 
-Correct posture
-Adjust your knee
-Straighten your arm
-Raise your hand
-Adjust your position
-🔊 Bilingual Voice Feedback
+## 🧠 How It Works
 
-The application supports voice feedback in:
+The application follows a computer vision pipeline to detect and analyze yoga poses:
 
-English
-Hindi
+```text
+                    ┌──────────────────┐
+                    │      Webcam      │
+                    └────────┬─────────┘
+                             ↓
+                    ┌──────────────────┐
+                    │  Video Capture   │
+                    │     OpenCV       │
+                    └────────┬─────────┘
+                             ↓
+                    ┌──────────────────┐
+                    │ MediaPipe Pose   │
+                    │    Detection     │
+                    └────────┬─────────┘
+                             ↓
+                    ┌──────────────────┐
+                    │ Body Landmarks   │
+                    └────────┬─────────┘
+                             ↓
+                    ┌──────────────────┐
+                    │ Joint Angle      │
+                    │   Calculation    │
+                    └────────┬─────────┘
+                             ↓
+                    ┌──────────────────┐
+                    │ Pose Analysis &  │
+                    │ Classification   │
+                    └────────┬─────────┘
+                             ↓
+              ┌──────────────┴──────────────┐
+              ↓                             ↓
+      ┌───────────────┐             ┌───────────────┐
+      │ Correct Pose  │             │ Incorrect Pose│
+      └───────┬───────┘             └───────┬───────┘
+              ↓                             ↓
+      Positive Feedback             Correction Feedback
+```
 
-This makes the application more accessible for different users.
+---
 
-🤖 AI Chatbot
+## 🔬 Pose Detection
 
-An integrated chatbot allows users to ask questions related to:
+The application uses **MediaPipe Pose** to detect important human body landmarks such as:
 
-Yoga
-Exercises
-Yoga poses
-General guidance
-👤 User Authentication
+* Shoulders
+* Elbows
+* Wrists
+* Hips
+* Knees
+* Ankles
 
-The application includes user login/signup functionality for managing individual user sessions and progress.
+These landmarks provide the coordinates required for posture analysis.
 
-📊 Progress Tracking
+### Joint Angle Calculation
 
-Users can track their yoga practice and pose-related progress.
-
-📸 Pose Snapshots
-
-The application can store snapshots associated with yoga practice and user progress.
-
-🛠️ Tech Stack
-Technology	Purpose
-Python	Core programming
-OpenCV	Webcam and image processing
-MediaPipe	Human pose estimation
-Streamlit	Web application interface
-NumPy	Numerical operations
-SQLite	Local data management
-Supabase	Cloud authentication/data functionality
-AI/LLM	Chatbot functionality
-🧠 How It Works
-
-The overall workflow is:
-
-        Webcam
-           ↓
-    Video Frame Capture
-           ↓
-        OpenCV
-           ↓
-   MediaPipe Pose Detection
-           ↓
-     Body Landmarks
-           ↓
-    Joint Angle Calculation
-           ↓
-      Pose Analysis
-           ↓
- ┌─────────┴─────────┐
- ↓                   ↓
-Correct          Incorrect
-Posture           Posture
- ↓                   ↓
-Positive        Correction
-Feedback         Feedback
-🔬 Pose Detection Pipeline
-Step 1 — Capture Video
-
-The webcam continuously captures frames from the user.
-
-Step 2 — Process Frame
-
-OpenCV processes the captured image frame.
-
-Step 3 — Detect Landmarks
-
-MediaPipe identifies human body landmarks.
+The angle between three body landmarks can be calculated using their coordinates.
 
 For example:
 
-        Head
-         ●
-         |
-    ●────●────●
- Shoulder  Shoulder
-         |
-        ●
-        Hip
-       /  \
-      ●    ●
-    Knee  Knee
-Step 4 — Calculate Angles
+```text
+        A
+         \
+          \
+           B -------- C
+```
 
-The coordinates of three landmarks are used to calculate joint angles.
+The angle at point `B` can be calculated using the coordinates of `A`, `B`, and `C`.
 
-For example:
+These calculated angles are then used to determine whether the user's posture matches the expected posture for a particular yoga pose.
 
-A -------- B
-            \
-             \
-              C
+---
 
-The angle at B is calculated using the coordinates of A, B, and C.
+## 🧘 Supported Yoga Poses
 
-Step 5 — Analyze Pose
+The project contains reference images and configurations for multiple yoga poses, including:
 
-The calculated angles are compared with predefined conditions for the selected yoga pose.
+* Tadasana
+* Vrikshasana
+* Trikonasana
+* Virabhadrasana
+* Bhujangasana
+* Dhanurasana
+* Dandasana
+* Padmasana
+* Paschimottanasana
+* Malasana
+* Bakasana
+* Chaturanga Dandasana
+* Phalakasana (Plank)
+* Shavasana
+* Setu Bandhasana
+* Natarajasana
+* Gomukhasana
+* Janu Shirshasana
+* Pavanamuktasana
+* Vasisthasana
+* Ashwa Sanchalanasana
+* Adho Mukha Svanasana
+* and other yoga poses
 
-Step 6 — Provide Feedback
+---
 
-The system provides visual and voice feedback based on the detected posture.
+## 🔊 Voice Feedback
 
-🧘 Supported Yoga Poses
+The application provides real-time voice feedback to guide the user during practice.
 
-The application contains multiple yoga poses, including examples such as:
+Feedback can be provided in:
 
-Tadasana
-Tree Pose
-Warrior Pose
-Chair Pose
-Downward Dog
-Cobra Pose
-Plank
-Trikonasana
+* 🇬🇧 English
+* 🇮🇳 Hindi
 
-The exact supported poses depend on the pose configurations implemented in the application.
+This allows the user to focus on their posture without continuously looking at the screen.
 
-📂 Project Structure
+---
+
+## 🤖 AI Yoga Chatbot
+
+The application also includes an AI-based chatbot that can assist users with yoga-related queries.
+
+Users can interact with the chatbot to ask questions related to:
+
+* Yoga poses
+* Exercise guidance
+* Yoga practice
+* General yoga-related information
+
+---
+
+## 👤 User Authentication & Progress
+
+The application includes user-related functionality for managing individual practice sessions.
+
+Features include:
+
+* User registration/login
+* User-specific sessions
+* Progress tracking
+* Pose snapshots
+* Practice history
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology    | Purpose                                       |
+| ------------- | --------------------------------------------- |
+| **Python**    | Core application development                  |
+| **OpenCV**    | Real-time webcam and image processing         |
+| **MediaPipe** | Human pose and landmark detection             |
+| **Streamlit** | Interactive web application                   |
+| **NumPy**     | Numerical and mathematical operations         |
+| **SQLite**    | Local user/data storage                       |
+| **Supabase**  | Cloud-based authentication/data functionality |
+| **AI / LLM**  | Yoga chatbot functionality                    |
+
+---
+
+## 📂 Project Structure
+
+```text
 Yoga-Pose-Detection/
 │
 ├── yoga_pose_updated.py
-│
 ├── requirements.txt
 │
 ├── patch.py
@@ -206,156 +235,201 @@ Yoga-Pose-Detection/
 ├── .gitignore
 │
 └── README.md
-⚙️ Installation
-1. Clone the Repository
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/PoojaMaurya0742/Yoga-Pose-Detection.git
+```
 
-Move into the project directory:
+### 2. Navigate to the Project
 
+```bash
 cd Yoga-Pose-Detection
-2. Create a Virtual Environment
+```
+
+### 3. Create a Virtual Environment
+
+```bash
 python -m venv venv
+```
 
 Activate it on Windows:
 
+```bash
 venv\Scripts\activate
-3. Install Dependencies
+```
+
+### 4. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-MediaPipe Compatibility
+```
 
-This project uses the MediaPipe API containing:
+### 5. Install Compatible MediaPipe Version
 
-mp.solutions.pose
+This project uses the `mp.solutions` API of MediaPipe.
 
-Therefore, use:
+Install the compatible version:
 
-pip install mediapipe==0.10.21
-
-If another MediaPipe version causes:
-
-AttributeError: module 'mediapipe' has no attribute 'solutions'
-
-install the compatible version:
-
+```bash
 pip uninstall mediapipe -y
 pip install mediapipe==0.10.21
-▶️ Running the Application
+```
+
+---
+
+## ▶️ Run the Application
 
 Start the Streamlit application:
 
+```bash
 streamlit run yoga_pose_updated.py
+```
 
-The application will open in your browser at:
+The application will be available at:
 
+```text
 http://localhost:8501
-💻 System Requirements
+```
 
-Recommended environment:
+---
 
-Python 3.9+
-Webcam
-Windows/Linux/macOS
-Working internet connection for cloud/AI functionality
-Modern web browser
-🔐 Security
+## 💻 Requirements
 
-If deploying this application publicly:
+### Software
 
-Do not commit API keys.
-Do not commit passwords.
-Do not expose authentication credentials.
-Store secrets using environment variables.
-Avoid committing databases containing real user information.
+* Python 3.9 or higher
+* Git
+* Modern web browser
 
-Example:
+### Hardware
 
-API_KEY=your_api_key
-SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_key
+* Webcam
+* Laptop/Desktop capable of running Python and OpenCV
 
-Add sensitive files to .gitignore.
+### Recommended
 
-📚 Concepts Used
+* Good lighting
+* Stable camera position
+* Full or upper-body visibility depending on the selected pose
+
+---
+
+## 🎯 Project Objectives
+
+The major objectives of this project are:
+
+1. Detect human body posture using Computer Vision.
+2. Identify yoga poses in real time.
+3. Calculate body joint angles.
+4. Analyze posture against predefined conditions.
+5. Provide real-time corrective feedback.
+6. Provide voice-based yoga guidance.
+7. Build an interactive AI-assisted yoga application.
+
+---
+
+## 🧩 Core Concepts Used
 
 This project demonstrates practical implementation of:
 
-Computer Vision
-Human Pose Estimation
-Machine Learning concepts
-Image Processing
-Coordinate Geometry
-Joint Angle Calculation
-Real-Time Video Processing
-AI Chatbot Integration
-Web Application Development
-User Authentication
-Database Management
-Cloud Integration
-🎯 Project Objective
+* Computer Vision
+* Human Pose Estimation
+* Image Processing
+* Real-Time Video Processing
+* Coordinate Geometry
+* Joint Angle Calculation
+* Pose Classification
+* Artificial Intelligence
+* AI Chatbot Integration
+* Web Application Development
+* User Authentication
+* Database Management
 
-The main objective of this project is to develop an accessible virtual yoga assistant that can:
+---
 
-Detect human body posture.
-Identify yoga poses.
-Analyze body alignment.
-Provide real-time correction.
-Give voice-based guidance.
-Help users practice yoga using a webcam.
-🚀 Future Enhancements
+## 🚀 Future Enhancements
 
-Possible future improvements include:
+* [ ] Add more yoga poses
+* [ ] Improve pose classification accuracy
+* [ ] Add automatic repetition counting
+* [ ] Add pose-hold timer
+* [ ] Add personalized workout plans
+* [ ] Add advanced posture scoring
+* [ ] Add detailed progress analytics
+* [ ] Improve voice interaction
+* [ ] Build a mobile application
+* [ ] Add cloud-based user dashboards
+* [ ] Improve AI-based personalized recommendations
 
- More yoga poses
- Improved pose classification
- Personalized workout plans
- Advanced posture scoring
- Rep counting
- Pose-hold timer
- Improved voice interaction
- Mobile application
- Cloud-based user dashboard
- Historical performance analytics
- Improved AI-based posture recommendations
-⚠️ Limitations
+---
 
-The accuracy of pose detection can depend on:
+## ⚠️ Limitations
 
-Camera quality
-Lighting conditions
-Camera angle
-User distance from camera
-Body visibility
-Occlusion
-Pose complexity
+Pose detection performance may vary depending on:
 
-The application is intended for educational and demonstration purposes and should not replace professional medical or fitness advice.
+* Camera quality
+* Lighting conditions
+* Camera angle
+* User distance from the camera
+* Body visibility
+* Background conditions
+* Pose complexity
 
-🎓 Academic Project
+The system is developed primarily for **academic, educational, and demonstration purposes**.
 
-Project Type: Mini Project
-Academic Year: Second Year
-Domain: Artificial Intelligence / Computer Vision
-Application: Yoga Pose Detection & Posture Correction
+---
 
-This project was developed as part of an academic group project to gain practical experience in Python, Computer Vision, MediaPipe, OpenCV, AI, and Streamlit application development.
+## 🎓 Academic Project
 
-👩‍💻 Author
+**Project Type:** Mini Project
+**Year:** Second Year
+**Domain:** Artificial Intelligence & Computer Vision
+**Event:** ProjecTech 2025
+**Achievement:** 🥈 **2nd Prize**
 
-Pooja Maurya
+This project was developed as a **group academic mini project** to apply concepts of Python, Computer Vision, Artificial Intelligence, MediaPipe, OpenCV, and web application development in a practical system.
 
-B.E. Information Technology
+---
+
+## 👩‍💻 Team Project
+
+This project was developed as a **group project** during the second year of the B.E. Information Technology program.
+
+The project involved collaborative work across development, Computer Vision, pose detection, testing, and application implementation.
+
+---
+
+## 👩‍💻 Author
+
+### Pooja Maurya
+
+**B.E. Information Technology**
 Shree L. R. Tiwari College of Engineering
 
-GitHub:
-https://github.com/PoojaMaurya0742
+* GitHub: [PoojaMaurya0742](https://github.com/PoojaMaurya0742)
+* LinkedIn: [Pooja Maurya](https://www.linkedin.com/in/pooja-maurya-9070b52b8/)
 
-LinkedIn:
-https://www.linkedin.com/in/pooja-maurya-9070b52b8/
+---
 
-📜 Disclaimer
+## 📜 Disclaimer
 
-This project is developed for academic and educational purposes. Yoga posture feedback generated by the application should not be considered professional medical or fitness advice.
+This project is intended for **educational and demonstration purposes**. The posture feedback provided by the application should not be considered a substitute for professional medical, physiotherapy, or fitness advice.
 
-⭐ Project
+---
 
-If you find this project useful, consider giving the repository a ⭐ on GitHub.
+## ⭐ Support
+
+If you find this project interesting, consider giving the repository a ⭐ on GitHub.
+
+---
+
+<p align="center">
+  Made with Python, OpenCV, MediaPipe & Streamlit
+</p>
