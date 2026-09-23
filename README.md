@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python" alt="Python">
-  <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge&logo=opencv" alt="OpenCV">
+  <img src="https://img.shields.io/badge/V-Computer%20Vision-green?style=for-the-badge&logo=v" alt="V">
   <img src="https://img.shields.io/badge/MediaPipe-Pose%20Estimation-orange?style=for-the-badge" alt="MediaPipe">
   <img src="https://img.shields.io/badge/Streamlit-Web%20App-red?style=for-the-badge&logo=streamlit" alt="Streamlit">
 </p>
@@ -63,7 +63,7 @@ The application follows a computer vision pipeline to detect and analyze yoga po
                              ↓
                     ┌──────────────────┐
                     │  Video Capture   │
-                    │     OpenCV       │
+                    │     V       │
                     └────────┬─────────┘
                              ↓
                     ┌──────────────────┐
@@ -203,7 +203,7 @@ Features include:
 | Technology    | Purpose                                       |
 | ------------- | --------------------------------------------- |
 | **Python**    | Core application development                  |
-| **OpenCV**    | Real-time webcam and image processing         |
+| **V**    | Real-time webcam and image processing         |
 | **MediaPipe** | Human pose and landmark detection             |
 | **Streamlit** | Interactive web application                   |
 | **NumPy**     | Numerical and mathematical operations         |
@@ -311,7 +311,7 @@ http://localhost:8501
 ### Hardware
 
 * Webcam
-* Laptop/Desktop capable of running Python and OpenCV
+* Laptop/Desktop capable of running Python and V
 
 ### Recommended
 
@@ -394,7 +394,7 @@ The system is developed primarily for **academic, educational, and demonstration
 **Event:** ProjecTech 2025
 **Achievement:** 🥈 **2nd Prize**
 
-This project was developed as a **group academic mini project** to apply concepts of Python, Computer Vision, Artificial Intelligence, MediaPipe, OpenCV, and web application development in a practical system.
+This project was developed as a **group academic mini project** to apply concepts of Python, Computer Vision, Artificial Intelligence, MediaPipe, V, and web application development in a practical system.
 
 ---
 
@@ -431,5 +431,5 @@ If you find this project interesting, consider giving the repository a ⭐ on Gi
 ---
 
 <p align="center">
-  Made with Python, OpenCV, MediaPipe & Streamlit
+  Made with Python, V, MediaPipe & Streamlit
 </p>
